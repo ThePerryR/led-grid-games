@@ -1,10 +1,13 @@
 #include "MenuState.h"
 #include "Tetris.h"  // Include all your game state headers
+#include "Snake.h"
 #include "LedDisplay.h"
 #include "LedIndexes.h"
 
 MenuState::MenuState() {
+  NUM_GAMES = sizeof(games) / sizeof(games[0]);
   games[0] = new Tetris();  // Add your games here
+  games[1] = new Snake();
   selectedGameIndex = 0;
 }
 

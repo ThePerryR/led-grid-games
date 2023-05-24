@@ -3,12 +3,13 @@
 
 #include "State.h"
 #include "GameState.h"
-
-constexpr size_t NUM_GAMES = 1;
+#include "Tetris.h"
+#include "Snake.h"
 
 class MenuState : public State {
 private:
-  GameState* games[NUM_GAMES];
+  GameState* games[2] = { new Tetris(), new Snake() };
+  size_t NUM_GAMES;
   size_t selectedGameIndex;
 public:
   MenuState();
