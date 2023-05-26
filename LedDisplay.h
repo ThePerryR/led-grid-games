@@ -10,6 +10,8 @@ private:
 public:
   static CRGB* getLeds() { return leds; }
   static uint16_t getNumLeds() { return NUM_LEDS; }
+  static uint16_t getWidth() { return 10; }
+  static uint16_t getHeight() { return 25; }
   static void clearGrid();
 };
 

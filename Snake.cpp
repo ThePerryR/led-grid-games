@@ -1,9 +1,7 @@
 #include "Snake.h"
-#include "MenuState.h"
 
 State* Snake::handleInput() {
   // When the button is pressed, go back to the menu
-  return new MenuState();
 }
 
 void Snake::loop() {
